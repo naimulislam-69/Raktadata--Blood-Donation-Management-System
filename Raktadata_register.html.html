@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <title>নতুন দাতা নিবন্ধন - রক্তদাতা</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; }
+        .card { background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 30px; margin: 20px 0; }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 8px; font-weight: bold; }
+        input, select { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; }
+        .btn { background: #c00; color: white; padding: 12px 25px; border: none; border-radius: 5px; cursor: pointer; width: 100%; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2 style="text-align: center; color: #c00;">নতুন রক্তদাতা নিবন্ধন</h2>
+        
+        <form method="POST">
+            <div class="form-group">
+                <label for="name">পূর্ণ নাম:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">মোবাইল নম্বর:</label>
+                <input type="tel" id="phone" name="phone" placeholder="01XXXXXXXXX" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="blood_group">রক্তের গ্রুপ:</label>
+                <select id="blood_group" name="blood_group" required>
+                    <option value="">নির্বাচন করুন</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="last_donation">সর্বশেষ দানের তারিখ:</label>
+                <input type="date" id="last_donation" name="last_donation" required>
+            </div>
+            
+            <button type="submit" class="btn">নিবন্ধন সম্পন্ন করুন</button>
+        </form>
+    </div>
+</body>
+</html>
