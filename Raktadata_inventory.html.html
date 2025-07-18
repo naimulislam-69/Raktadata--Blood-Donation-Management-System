@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <title>রক্তের মজুদ - রক্তদাতা</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .header { background: #c00; color: white; padding: 15px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background-color: #f2f2f2; }
+        .btn { background: #c00; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>সম্পূর্ণ রক্তদাতা তালিকা</h2>
+    </div>
+    
+    <table>
+        <tr>
+            <th>আইডি</th>
+            <th>নাম</th>
+            <th>মোবাইল</th>
+            <th>রক্তের গ্রুপ</th>
+            <th>সর্বশেষ দান</th>
+        </tr>
+        {% for donor in donors %}
+        <tr>
+            <td>{{ donor[0] }}</td>
+            <td>{{ donor[1] }}</td>
+            <td>{{ donor[2] }}</td>
+            <td>{{ donor[3] }}</td>
+            <td>{{ donor[4] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+    <div style="margin-top: 20px; text-align: center;">
+        <a href="/"><button class="btn">ড্যাশবোর্ডে ফিরে যান</button></a>
+    </div>
+</body>
+</html>
